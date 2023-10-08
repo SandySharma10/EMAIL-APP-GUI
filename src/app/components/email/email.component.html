@@ -1,0 +1,27 @@
+<div class="container">
+    <div class="card">
+    <form (ngSubmit)="doSubmitForm()">
+    <h1>
+        Email Compose..
+    </h1>
+    {{data | json}}
+    <mat-form-field class="feild" appearance="outline">
+      <mat-label >To</mat-label>
+      <input matInput name="to" [(ngModel)]="data.to">
+    </mat-form-field>
+      <mat-form-field class="feild" appearance="outline">
+        <mat-label >Subject</mat-label>
+        <input matInput name="subject" [(ngModel)]="data.subject">
+      </mat-form-field>
+      <mat-form-field class="feild">
+        <mat-label>Enter Your Message</mat-label>
+        <textarea rows="10" matInput placeholder="hey what are you doing" name="message" [(ngModel)]="data.message"></textarea>
+        
+      </mat-form-field>
+      <div class="text-center">
+        <button type="submit" mat-raised-button color="primary">Send</button>
+        <button type="reset" mat-raised-button color="accent">Reset</button>
+      </div>
+    </form>
+    </div>
+</div>
